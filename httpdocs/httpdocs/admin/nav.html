@@ -1,0 +1,712 @@
+<style>
+/* NAVIGATION STYLES */	
+	div#nav {
+	clear: both;
+	float: left;
+	width: 164px;
+	margin-right: 5px;
+}
+#sitetoolsnav ul {
+	padding-left:15px;
+}
+.load_active > a {
+	font-weight:bold;
+}
+/* skip nav */
+	div#nav span.skipjump {
+	display: none;
+}
+div#nav .skip-links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+div#nav .skip-links li {
+	display: inline;
+}
+div#nav .skip-links a {
+	position: absolute;
+	top: 0;
+	left: -99999px;
+}
+div#nav .skip-links a:active, div#nav .skip-links a:focus {
+	left: 0;
+	background: #003768;
+	color: #fff;
+	padding: 5px;
+	float: left;
+	font-size: 1.1em;
+}
+#nav {
+	clear: both;
+	float: left;
+	width: 164px;
+	margin-right: 5px;
+}
+ul#mainnav, ul#mainnav ul, ul#mainnav li {
+	margin:0;
+	padding:0;
+}
+#nav {
+	margin:0;
+}
+/* All levels */
+		ul#mainnav {
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-weight:normal;
+	overflow: hidden;
+}
+ul#mainnav li {
+	margin:0 0 1px 0;
+	padding:0;
+	list-style:none;
+	font-weight:normal;
+	position:relative;
+}
+ul#mainnav li a {
+	font-size: 1.1em;
+	padding:0px 0px 10px 20px;
+	display:block;
+	text-decoration:none;
+	color:#003768;
+}
+ul#mainnav > li > a {
+	border-left: 1px solid white;
+}
+ul#mainnav > li:hover > a {
+	margin-left:11px;
+}
+/*	ul#mainnav li:hover		{background-image:url('../images/menu-indicator.png'); background-position:-7px center; background-repeat:no-repeat;} 	*/
+	/*	ul#mainnav li.open:hover		{font-weight:bold; background-image:url('../images/menu-indicator-plus.png'); background-position:-7px center; background-repeat:no-repeat;} 	*/
+		ul#mainnav li a:hover {
+	text-decoration: underline;
+	border-left: none;
+}
+/*	ul#mainnav li.active:hover > a	{text-decoration: none !important;} */
+		ul#mainnav li.active {
+	margin-left:10px;
+}
+ul#mainnav li.open > span {
+	cursor:pointer;
+	height:27px;
+	width:30px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	z-index:99;
+	background:url('../images/new_homepage/arrow.gif') no-repeat 10px 0;
+}
+ul#mainnav li.open.active {
+	font-weight:bold;
+	margin-bottom:0 !important;
+	background-repeat:no-repeat;
+	height:auto !important;
+	background:transparent;
+}
+ul#mainnav li.active a {
+	margin-left:0;
+}
+ul#mainnav:hover li:before {
+	background:none;
+	width:0;
+	height:0;
+}
+ul#mainnav li a {
+	margin-left:10px;
+	padding:6px 8px 6px 8px;
+	text-decoration: none;
+	display:block;
+	background:#EFE9E5;
+}
+ul#mainnav li li a {
+	margin-left:20px;
+	padding:7px 20px 7px 10px;
+	font-size:1em;
+	text-decoration: none;
+	display:block;
+}
+ul#mainnav li li li a {
+	margin-left: 30px;
+	padding:7px 8px 7px 20px;
+	text-decoration: none;
+	display:block;
+}
+ul#mainnav li li li li a {
+	margin-left: 40px;
+	padding:7px 8px 7px 25px;
+	text-decoration: none;
+	display:block;
+}
+ul#mainnav li li li li li a {
+	margin-left: 50px;
+	padding:7px 8px 7px 10px;
+	text-decoration: none;
+	display:block;
+}
+ul#mainnav li li li li li li a {
+	margin-left: 60px;
+	padding:7px 8px 7px 10px;
+	text-decoration: none;
+	display:block;
+}
+ul#mainnav ul li.active > a:before {
+	width:10px;
+	height:28px;
+	display:block;
+	visibility:visible;
+	position:absolute;
+	content:'';
+	top:0;
+	left:-11px;
+}
+ul#mainnav:hover ul li.active > a:before, ul#mainnav ul li.active.nocol > a:before, ul#mainnav:hover li.active > a:before, ul#mainnav:hover ul li.has_ul > a:before {
+	visibility:hidden;
+}
+ul#mainnav:hover ul li > a:hover:before, ul#mainnav ul li.has_ul > a:before {
+	width:10px;
+	visibility:visible;
+	height:28px;
+	position:absolute;
+	content:'';
+	top:0;
+	left:-11px;
+}
+ul#mainnav:hover ul li.active > a:hover:before, ul#mainnav ul li.active.nocol > a:hover:before, ul#mainnav:hover ul li.has_ul > a:hover:before {
+	width:10px !important;
+	visibility:visible;
+	position:absolute;
+	content:'';
+	top:0;
+	left:-11px;
+}
+ul#mainnav ul li.active > a:before {
+	width:10px;
+	height:28px;
+	position:absolute;
+	visibility:visible;
+	content:'';
+	top:0;
+	left:-11px;
+}
+ul#mainnav li.double > a:before {
+	height:40px !important;
+}
+.active {
+	background-position:-7px -5px !important;
+	padding-left:0 !important;
+	font-weight:bold;
+}
+.active li {
+	background-position:-7px -6px !important;
+	padding-left:0 !important;
+	font-weight:bold;
+}
+.active li li {
+	background-position:-7px -6px !important;
+	padding-left:0 !important;
+	font-weight:bold;
+}
+.active > a, .on {
+	font-weight:bold;
+}
+ul#mainnav li.active > ul {
+	display:block !important;
+}
+/* Styling for each level of navigatinal link */
+		
+		/* Home */
+			.homeLink {
+	background:#7d6a55;
+}
+.homeLink.active {
+	background:#7d6a55;
+	margin-bottom:1px !important;
+	margin-left:0 !important;
+}
+.homeLink.active a {
+	margin-left:10px !important;
+}
+/* Public */
+			/* 1st Level */
+			ul#mainnav li.public {
+	background:#008039;
+}
+ul#mainnav li.public:hover > a {
+	background:#008039;
+	color:white;
+}
+ul#mainnav li.public.active > a {
+	color:white;
+	background:#008039;
+	margin-left:-11px;
+}
+/* 2nd Level */
+			ul#mainnav li.public ul {
+	color:white;
+	background:#008039;
+}
+ul#mainnav li.public ul li {
+	margin:1px 0 1px 0;
+	padding-left:10px;
+	background:#a6d3ba;
+}
+ul#mainnav li.public ul li a {
+	background:#a6d3ba;
+}
+ul#mainnav li.public li a:hover:before, ul#mainnav li.public li:before, ul#mainnav li.public li.active a:before, ul#mainnav li.public li a:before {
+	background:#008039;
+}
+/* 3rd Level */
+			ul#mainnav li.public ul li ul {
+	background:#a6d3ba;
+}
+ul#mainnav li.public ul li {
+	margin:1px 0 1px 0;
+	padding-left:10px;
+	background:#bfdfcd;
+}
+ul#mainnav li.public ul ul a {
+	background:#bfdfcd;
+}
+ul#mainnav li.public ul li ul li ul {
+	color:white;
+	background:#bfdfcd;
+}
+ul#mainnav li.public ul li ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#e5f2eb;
+}
+ul#mainnav li.public ul li ul li ul li a {
+	background:#e5f2eb !important;
+}
+/* Organisations */
+			/* 1st Level */
+			ul#mainnav li.organisations,  ul#mainnav li.organisations {
+	background:#ffe153;
+}
+ul#mainnav li.organisations:hover > a {
+	background:#ffe153;
+}
+ul#mainnav li.organisations.active > a {
+	background:#ffe153;
+	margin-left:-11px;
+}
+/* 2nd Level */
+			ul#mainnav li.organisations ul {
+	color:white;
+	background:#ffe153;
+}
+ul#mainnav li.organisations ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#fff0a9;
+}
+ul#mainnav li.organisations ul li a {
+	background:#fff0a9;
+}
+ul#mainnav li.organisations li a:hover:before, ul#mainnav li.organisations li.active a:before, ul#mainnav li.organisations li a:before {
+	background:#ffe153;
+}
+/* 3rd Level */
+			ul#mainnav li.organisations ul li ul {
+	color:white;
+	background:#fff0a9;
+}
+ul#mainnav li.organisations ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#fff7d4;
+}
+ul#mainnav li.organisations ul li ul li a {
+	background:#fff7d4;
+}
+/* 4th Level */	
+			ul#mainnav li.organisations ul li ul li ul {
+	color:white;
+	background:#fff7d4;
+}
+ul#mainnav li.organisations ul li ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#fffced;
+}
+ul#mainnav li.organisations ul li ul li ul li a {
+	background:#fffced !important;
+}
+/* 5th Level */	
+			ul#mainnav li.organisations ul ul ul ul {
+	background:#FEFEF2;
+}
+/* What we cover */
+			/* 1st Level */
+			ul#mainnav li.whatwecover {
+	background:#D70077;
+}
+ul#mainnav li.whatwecover:hover > a {
+	background:#D70077;
+	color:white;
+}
+ul#mainnav li.whatwecover.active > a {
+	background:#D70077;
+	color:white;
+	margin-left:-11px;
+}
+/* 2nd Level */
+			ul#mainnav li.whatwecover ul {
+	color:white;
+	background:#D70077;
+}
+ul#mainnav li.whatwecover ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#f1a6d0;
+}
+ul#mainnav li.whatwecover ul li a {
+	background:#f1a6d0;
+}
+ul#mainnav li.whatwecover li a:hover:before, ul#mainnav li.whatwecover li.active a:before, ul#mainnav li.whatwecover li a:before {
+	background:#D70077;
+}
+/* 3rd Level */
+			ul#mainnav li.whatwecover ul li ul {
+	color:white;
+	background:#f1a6d0;
+}
+ul#mainnav li.whatwecover ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#f5bfdd;
+}
+ul#mainnav li.whatwecover ul li ul li a {
+	background:#f5bfdd;
+}
+/* 4th Level */	
+			ul#mainnav li.whatwecover ul li ul li ul {
+	color:white;
+	background:#f5bfdd;
+}
+ul#mainnav li.whatwecover ul li ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#fbe5f1;
+}
+ul#mainnav li.whatwecover ul li ul li ul li a {
+	background:#fbe5f1 !important;
+}
+/* 5th Level */	
+			ul#mainnav li.whatwecover ul ul ul ul {
+	background:#FEFEF2;
+	color:#333;
+}
+/* About Us */
+			/* 1st Level */
+
+			ul#mainnav li.aboutus {
+	background:#003768;
+}
+ul#mainnav li.aboutus:hover > a {
+	background:#003768;
+	color:white;
+}
+ul#mainnav li.aboutus.active > a {
+	background:#003768;
+	color:white;
+	margin-left:-11px;
+}
+/* 2nd Level */
+			ul#mainnav li.aboutus ul {
+	color:white;
+	background:#003768;
+}
+ul#mainnav li.aboutus ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#b2c3d1;
+}
+ul#mainnav li.aboutus ul li a {
+	background:#b2c3d1;
+}
+ul#mainnav li.aboutus li a:hover:before, ul#mainnav li.aboutus li.active a:before, ul#mainnav li.aboutus li a:before {
+	background:#003768;
+}
+/* 3rd Level */
+			ul#mainnav li.aboutus ul li ul {
+	color:white;
+	background:#b2c3d1;
+}
+ul#mainnav li.aboutus ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#bfcdd9;
+}
+ul#mainnav li.aboutus ul li ul li a {
+	background:#bfcdd9;
+}
+/* 4th Level */	
+			ul#mainnav li.aboutus ul li ul li ul {
+	color:white;
+	background:#bfcdd9;
+}
+ul#mainnav li.aboutus ul li ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#e5ebf0;
+}
+ul#mainnav li.aboutus ul li ul li ul li a {
+	background:#e5ebf0 !important;
+}
+/* 5th Level */	
+			ul#mainnav li.aboutus ul ul ul ul {
+	background:#FEFEF2;
+	color:#333;
+}
+/* Media */
+			/* 1st Level */
+			ul#mainnav li.media {
+	background:#791D7E;
+}
+ul#mainnav li.media:hover > a {
+	background:#791D7E;
+	color:white;
+}
+ul#mainnav li.media.active > a {
+	background:#791D7E;
+	color:white;
+	margin-left:-11px;
+}
+/* 2nd Level */
+			ul#mainnav li.media ul {
+	color:white;
+	background:#791D7E;
+}
+ul#mainnav li.media ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#D0B0D2;
+}
+ul#mainnav li.media ul li a {
+	background:#D0B0D2;
+}
+ul#mainnav li.media li a:hover:before, ul#mainnav li.media li.active a:before, ul#mainnav li.media li a:before {
+	background:#791D7E;
+}
+/* 3rd Level */
+			ul#mainnav li.media ul li ul {
+	color:white;
+	background:#D0B0D2;
+}
+ul#mainnav li.media ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#ddc6df;
+}
+ul#mainnav li.media ul li ul li a {
+	background:#ddc6df;
+}
+/* 4th Level */	
+			ul#mainnav li.media ul li ul li ul {
+	color:white;
+	background:#ddc6df;
+}
+ul#mainnav li.media ul li ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#f1e8f2;
+}
+ul#mainnav li.media ul li ul li ul li a {
+	background:#f1e8f2 !important;
+}
+/* 5th Level */	
+			ul#mainnav li.media ul ul ul ul {
+	background:#FEFEF2;
+	color:#333;
+}
+/* Tools */
+			/* 1st Level */
+			ul#mainnav li.tools {
+	background:#C41230;
+}
+ul#mainnav li.tools:hover > a {
+	background:#C41230;
+	color:white;
+}
+ul#mainnav li.tools.active > a {
+	background:#C41230;
+	color:white;
+	margin-left:-11px;
+}
+/* 2nd Level */
+			ul#mainnav li.tools ul {
+	color:white;
+	background:#C41230;
+}
+ul#mainnav li.tools ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#eaacb7;
+}
+ul#mainnav li.tools ul li a {
+	background:#eaacb7;
+}
+ul#mainnav li.tools li a:hover:before, ul#mainnav li.tools li.active a:before, ul#mainnav li.tools li a:before {
+	background:#C41230;
+}
+/* 3rd Level */
+			ul#mainnav li.tools ul li ul {
+	color:white;
+	background:#eaacb7;
+}
+ul#mainnav li.tools ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#f0c4cb;
+}
+ul#mainnav li.tools ul li ul li a {
+	background:#f0c4cb;
+}
+/* 4th Level */	
+			ul#mainnav li.tools ul li ul li ul {
+	color:white;
+	background:#f0c4cb;
+}
+ul#mainnav li.tools ul li ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#f9e7ea;
+}
+ul#mainnav li.tools ul li ul li ul li a {
+	background:#f9e7ea !important;
+}
+/* 5th Level */	
+			ul#mainnav li.tools ul ul ul ul {
+	background:#FEFEF2;
+	color:#333;
+}
+/* Complaints */
+			/* 1st Level */
+			ul#mainnav li.complaints {
+	background:#F99D31;
+}
+ul#mainnav li.complaints:hover > a {
+	background:#F99D31;
+}
+ul#mainnav li.complaints.active > a {
+	background:#F99D31;
+	margin-left:-11px;
+}
+/* 2nd Level */
+			ul#mainnav li.complaints ul {
+	color:white;
+	background:#F99D31;
+}
+ul#mainnav li.complaints ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#fcce98;
+}
+ul#mainnav li.complaints ul li a {
+	background:#fcce98;
+}
+ul#mainnav li.complaints li:hover:before, ul#mainnav li.complaints .child_li a:before, ul#mainnav li.complaints li a:before {
+	background:#F99D31;
+}
+/* 3rd Level */
+			ul#mainnav li.complaints ul li ul {
+	color:white;
+	background:#fcce98;
+}
+ul#mainnav li.complaints ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#fde6cb;
+}
+ul#mainnav li.complaints ul li ul li a {
+	background:#fde6cb;
+}
+/* 4th Level */	
+			ul#mainnav li.complaints ul li ul li ul {
+	color:white;
+	background:#fde6cb;
+}
+ul#mainnav li.complaints ul li ul li ul li {
+	margin:0 0 1px 0;
+	padding-left:10px;
+	background:#fef5ea;
+}
+ul#mainnav li.complaints ul li ul li ul li a {
+	background:#fef5ea !important;
+}
+/* 5th Level */	
+			ul#mainnav li.complaints ul ul ul ul {
+	background:#FEFEF2;
+	color:#333;
+}
+/* Careers */
+			/* 1st Level */
+			ul#mainnav li.careers,  ul#mainnav li.opencareers {
+	background:#4E8ABE;
+}
+ul#mainnav li.careers:hover > a {
+	background:#4E8ABE;
+	color:white;
+}
+/* 2nd Level */
+			ul#mainnav li.opencareers ul {
+	background:#95b9d8;
+}
+/* 3rd Level */
+			ul#mainnav li.opencareers ul ul {
+	background:#dce8f2;
+	color:#333;
+}
+ul#mainnav li.youth {
+	background:#D9DA56;
+}
+ul#mainnav li.youth:hover > a {
+	background:#D9DA56;
+}
+.lv3 a {
+	padding-left:5px;
+}
+.lv5 a {
+	padding-left:30px !important;
+}
+</style>
+<!-- NAV START -->
+<div id="nav">
+  <ul class="skip-links">
+    <li><a href="#content" accesskey="S">Skip navigation and jump to content</a></li>
+  </ul>
+  <!-- MAIN NAV -->
+  <ul id="mainnav">
+    <li class="homeLink"><a href="/" accesskey="1">Home</a></li>
+    <li class="open public"><a href="/for_the_public">For the public</a></li>
+    <li class="open organisations"><a href="/for_organisations">For organisations</a></li>
+    <li class=" whatwecover"><a href="/what_we_cover">What we cover</a>
+      <ul>
+        <li><a href="/what_we_cover/legislation">Legislation</a></li>
+        <li class="open"><a href="/what_we_cover/taking_action" class="on">Taking action</a>
+          <ul>
+            <li><a href="/what_we_cover/taking_action/dp_pecr">DP and PECR</a></li>
+            <li><a href="/what_we_cover/taking_action/foi_eir">FOI, EIR and INSPIRE</a></li>
+          </ul>
+        </li>
+        <li><a href="/what_we_cover/register_of_data_controllers">Register of data controllers</a></li>
+        <li><a href="/what_we_cover/audits_advisory_visits_and_self_assessments">Audits, advisory visits and self assessments</a></li>
+        <li><a href="/what_we_cover/handling_complaints">Handling concerns and complaints</a></li>
+        <li><a href="/what_we_cover/monitoring_compliance">Monitoring compliance</a></li>
+        <li><a href="/what_we_cover/international_duties">International duties</a></li>
+      </ul>
+    </li>
+    <li class="open aboutus"><a href="/about_us">About the ICO</a></li>
+    <li class="open media"><a href="/news">News and events</a></li>
+    <li class="open tools"><a href="/enforcement">Enforcement</a></li>
+    <li class="open complaints"><a href="/concerns" accesskey="7">Concerns</a></li>
+    <li class="careers"><a href="http://www.ico.jobs" target="_blank" title="External link, opens in new window">Jobs</a></li>
+    <li class="youth"><a href="/youth">Young people</a></li>
+  </ul>
+</div>
+<script language="javascript" type="text/javascript" src="nav.js"></script>

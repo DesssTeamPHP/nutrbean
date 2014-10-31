@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { min-height:500px !important; }
+
+.order_detail_head1 {
+margin: 20px 0 0;
+padding: 0px;
+}
+
+.order_detail_head1 li {
+background: none repeat scroll 0 0 #0A65C1;
+border-right: 1px solid #3795F5;
+color: #FFFFFF;
+float: left;
+font-size: 16px;
+font-weight: bold;
+letter-spacing: 1px;
+list-style: none outside none;
+margin: 0;
+padding: 14px 10px;
+text-align: center;
+text-decoration: none;
+}
+.update_bt:hover {
+background: none repeat scroll 0 0 #64A000;
+border: 1px solid #FFFFFF;
+box-shadow: 0 4px 10px -6px #000000;
+}
+.update_bt {
+background: none repeat scroll 0 0 #0A65C1;
+border: 1px solid #000000;
+border-radius: 5px 5px 5px 5px;
+color: #FFFFFF;
+cursor: pointer;
+font-size: 14px;
+margin: 0px 0px 8px 0px;
+padding: 4px;
+text-align: center;
+width: 62px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.order_detail_con1 li {
+border-right: 1px solid #ccc;
+color: #000;
+float: left;
+font-size: 16px;
+letter-spacing: 1px;
+list-style: none outside none;
+margin: 0;
+padding: 14px 10px;
+text-align: center;
+text-decoration: none;
+height: 62px;
+}
+
+.continue_bt {
+background: none repeat scroll 0 0 #0A65C1;
+border: 1px solid #000000;
+border-radius: 5px 5px 5px 5px;
+color: #FFFFFF;
+cursor: pointer;
+font-size: 14px;
+margin: 0px 0px 8px 0px;
+padding: 4px;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
